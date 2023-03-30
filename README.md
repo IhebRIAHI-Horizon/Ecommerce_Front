@@ -19,19 +19,19 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repository to your local machine
 
-$ git clone https://github.com/IhebRIAHI-Horizon/Ecommerce_Front.git
+    $ git clone https://github.com/IhebRIAHI-Horizon/Ecommerce_Front.git
 
 
 2. Navigate to the frontend directory and install the required packages
 
-$ npm i (or 'npm install')
+    $ npm i (or 'npm install')
 
 If you have an error "npm ERR! code ERESOLVE", use this command instead:
-$ npm i --force
+    $ npm i --force
 
 3. Start the frontend server
 
-$ ng s (or 'ng serve')
+    $ ng s (or 'ng serve')
 
 The application should now be running on http://localhost:4200
 
