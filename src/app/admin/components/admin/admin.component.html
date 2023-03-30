@@ -1,0 +1,35 @@
+<mat-drawer-container>
+	<mat-drawer #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="!mobileQuery.matches"
+		[ngClass]="{'sidenav-collapsed': collapsedNav && !mobileQuery.matches}">
+		<div class="sidenav-header">
+			<span>{{collapsedNav && !mobileQuery.matches ? 'Admin' : 'Admin Interface'}}</span>
+		</div>
+		<ul>
+			<li>
+				<!-- <button mat-icon-button (click)="snav.toggle()"> -->
+				<ng-container *ngIf='collapsedNav && !mobileQuery.matches'>
+					<span></span>
+				</ng-container>
+				<mat-icon routerLink="/admin">home</mat-icon>
+			</li>
+			<li routerLink="/admin/products/manage">
+				<mat-icon>settings</mat-icon>
+			</li>
+			<li routerLink="/products">
+				<mat-icon>store</mat-icon>
+			</li>
+			<li  (click)="logout()">
+				<mat-icon>exit_to_app</mat-icon>
+			</li>
+		</ul>
+	</mat-drawer>
+	<mat-drawer-content [ngClass]="{'sidenav-collapsed': collapsedNav && !mobileQuery.matches}">
+		<mat-toolbar>
+
+			<button mat-icon-button (click)="mobileQuery.matches ? snav.toggle() : collapsedNav = !collapsedNav">
+				<mat-icon>menu</mat-icon>
+			</button>
+		</mat-toolbar>
+		<router-outlet> </router-outlet>
+	</mat-drawer-content>
+</mat-drawer-container>

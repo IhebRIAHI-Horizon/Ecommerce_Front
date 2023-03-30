@@ -1,0 +1,36 @@
+.modal .modal-header,
+.modal .modal-body,
+.modal .modal-footer {
+  padding: 20px 30px;
+}
+
+.modal .modal-footer {
+  background: #ecf0f1;
+  border-radius: 0 0 3px 3px;
+}
+
+.dialog-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-modal {
+  margin-top: -40px;
+  margin-right: -20px;
+}
+
+.mat-success {
+  background-color: #198754;
+  color: #fff;
+}
+
+.mat-form-field {
+  display: unset;
+  position: relative;
+  text-align: left;
+}
+
+.mat-dialog-content {
+  padding: 0 40px;
+}

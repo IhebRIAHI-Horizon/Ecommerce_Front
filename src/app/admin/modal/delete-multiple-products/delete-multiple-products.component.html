@@ -1,0 +1,14 @@
+<div mat-dialog-title class="dialog-title">
+    <h1>Delete Multiple Products</h1>
+    <button mat-icon-button aria-label="close dialog" mat-dialog-close class="close-modal">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<div mat-dialog-content>
+    <p>Are you sure you want to delete these products? </p>
+    <p class="text-danger"><small>This action cannot be undone.</small></p>
+</div>
+<div mat-dialog-actions class="modal-footer">
+    <button mat-button color="primary" (click)="onNoClick()">Cancel</button>
+    <button mat-raised-button color="warn" (click)="onSubmit()" [disabled]="data.productsList.length==0">Delete</button>
+</div>

@@ -1,0 +1,86 @@
+<div class="dashboard">
+    <div class="container mb-3 text-center mt-5">
+        <h2 id="nova" class="fs-2 fw-light">WELCOME ADMIN</h2>
+    </div>
+
+    <div class="container all-charts">
+
+        <div class="row">
+            <!-- Card -->
+            <div class="card chart-card col-sm">
+
+                <div class="card-body">
+                    <p class="text-uppercase small mb-2"><strong>PERFORMANCE (Last Month)</strong></p>
+                    <h5 class="font-weight-bold mb-0">Sales/Profit Per Day</h5>
+                </div>
+
+                <hr class="my-0">
+
+                <div class="chart-container">
+                    <canvas id="sales-profit">{{ salesProfitChart }}</canvas>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+
+            <!-- Card -->
+            <div class="card chart-card col-sm">
+
+                <div class="card-body">
+                    <p class="text-uppercase small mb-2"><strong>Sales Details</strong></p>
+                    <h5 class="font-weight-bold mb-0">Sales/Category</h5>
+                </div>
+
+                <hr class="my-0">
+
+                <div class="chart-container">
+                    <canvas id="sales-category">{{ salesCategoryChart }}</canvas>
+                </div>
+
+            </div>
+            <!-- Card -->
+        </div>
+
+        <div class="row">
+            
+            <!-- Card -->
+            <div class="card chart-card col-sm">
+
+                <div class="card-body">
+                    <p class="text-uppercase small mb-2"><strong>PERFORMANCE (Global)</strong></p>
+                    <h5 class="font-weight-bold mb-0">Total Profit Per Year</h5>
+                </div>
+
+                <hr class="my-0">
+
+                <div class="chart-container">
+                    <canvas id="sales-profit-global">{{ salesProfitGlobalChart }}</canvas>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+            <!-- Card -->
+            <div class="card chart-card col-sm">
+
+                <div class="card-body">
+                    <p class="text-uppercase small mb-2"><strong>Sales Details</strong></p>
+                    <h5 class="font-weight-bold mb-0">Sales/Gender</h5>
+                </div>
+
+                <hr class="my-0">
+
+                <div class="chart-container">
+                    <canvas id="sales-gender">{{ salesGenderChart }}</canvas>
+                </div>
+
+            </div>
+            <!-- Card -->
+
+        </div>
+
+
+    </div>
+
+</div>

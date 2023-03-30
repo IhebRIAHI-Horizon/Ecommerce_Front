@@ -1,0 +1,98 @@
+<div class="container">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>Manage Products</h2>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn btn-success" (click)="openDialogAddProduct()">
+                        <i class="material-icons">&#xE147;</i> <span>Add New Product</span>
+                    </button>
+                    <!-- <button mat-icon-button color="warn" aria-label="add button" class="btn" mat-fab extended
+                        (click)="openDialogAddProduct()">
+                        <mat-icon>add</mat-icon>
+                        Add new product
+                    </button> -->
+                    <button class="btn btn-danger" (click)="openDialogDeleteMultipleProducts()">
+                        <i class="material-icons">&#xE15C;</i> <span>Delete Products &nbsp;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>
+
+                    </th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Gender</th>
+                    <th>Color</th>
+                    <th>Added Date</th>
+                    <th>Picture</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of (store$ | async)?.content; index as i">
+                    <td>
+                        <span class="custom-checkbox">
+                            <input type="checkbox" id="{{product.productId}}"
+                                (click)="selectProducts(product.productId)">
+                            <label for="{{product.productId}}"></label>
+                        </span>
+                    </td>
+                    <td>{{product.productId }}</td>
+                    <td>{{product.productName }}</td>
+                    <td>{{product.productPrice }}</td>
+                    <td>{{product.productType }}</td>
+                    <td>{{product.productFor }}</td>
+                    <td [ngStyle]="{'color':product.productColor=='White'?'':product.productColor }">
+                        {{product.productColor=="White"?'['+product.productColor+']':product.productColor }}</td>
+                    <td>{{product.productAddDate }}</td>
+                    <td><a href="assets/images/products/{{product.productImagePath }}">Picture</a></td>
+                    <td>
+                        <button mat-icon-button color="yellow" aria-label="delete button"
+                            (click)="openDialogEditProduct(product.productId)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-icon-button color="warn" aria-label="delete button"
+                            (click)="openDialogDeleteProduct(product.productId,product.productName)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="clearfix">
+            <div class="hint-text">Showing <b>{{(currentPage+1)*5>totalElements?totalElements:(currentPage+1)*5}}</b>
+                out of <b>{{totalElements}}</b> products</div>
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <button class="page-link light light-btn" (click)="previousPage()"> Previous </button>
+                </li>
+                <ng-container *ngFor="let page of range()">
+                    <li class="page-item">
+                        <a class="page-link light  {{page==currentPage+1?'current':''}}"
+                            [routerLink]="[getCurrentUrl()]" [queryParams]="{ page: page-1 }">{{ page }}</a>
+                    </li>
+                </ng-container>
+                <li class="page-item">
+                    <button class="page-link light light-btn" (click)="nextPage()"> Next </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <br />
+    <div *ngIf="data">
+        You signed up with: <p>{{data.productId}}</p>
+        <p>{{data.productName}}</p>
+    </div>
+</div>
