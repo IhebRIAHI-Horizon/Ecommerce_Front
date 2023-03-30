@@ -52,7 +52,7 @@ Minor features: scroll to top, navbar, sidebar, snackbar, products list dynamica
 
 ### Notes
 
-1. If you run the frontend on a different port instead of 4200, you need to change the    ' allowedOrigins("http://localhost:4200") ' in WebConfig.java
+1. If you run the frontend on a different port instead of 4200, you need to change the 'allowedOrigins("http://localhost:4200")' in WebConfig.java
 
 ## Contributing
 
