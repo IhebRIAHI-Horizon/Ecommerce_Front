@@ -26,7 +26,8 @@ These instructions will get you a copy of the project up and running on your loc
 
     $ npm i (or 'npm install')
 
-If you have an error "npm ERR! code ERESOLVE", use this command instead:
+2. If you have an error "npm ERR! code ERESOLVE", use this command instead:
+
     $ npm i --force
 
 3. Start the frontend server
