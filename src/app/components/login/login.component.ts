@@ -9,8 +9,6 @@ import { AbstractControl, UntypedFormBuilder, UntypedFormGroup, Validators } fro
   styleUrls: ['./login.component.scss']
 })
 
-
-
 export class LoginComponent {
   loginForm!: UntypedFormGroup;
   errorMessage!: string;
@@ -26,6 +24,7 @@ export class LoginComponent {
   }
 
   onSubmit() {
+    
     const loginFormValue: LoginForm = this.loginForm.value;
     this.authService.login(loginFormValue.email, loginFormValue.password).subscribe(
       response => {

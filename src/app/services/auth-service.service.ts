@@ -71,7 +71,10 @@ export class AuthService {
   logout() {
     // Set the authentication status to false
     console.log("logged out")
+    this.token="";
+    this.appCookieService.remove("jwtToken");
     this.authenticated.next(false);
+    
     // Perform any other logout tasks such as clearing local storage
   }
 
