@@ -42,11 +42,11 @@ Admin credentials : email: admin@admin.com / pwd : Admin
 
 ### Features
 
-1. Home Page: Displaying new added products (last 6/ last 15)
-2. Products: List products by gender, men or women, pageable with fixed size 6
+1. Home Page: Displaying new added products (last 6/ last 15).
+2. Products: List products by gender, men or women, pageable with fixed size 6.
 3. Cart: Add , edit quantity and delete products from the cart.
-4. Admin Dashboard: Charts(static for now), Edit products page: CRUD operations
-5. Login page: Admins only can login for now
+4. Admin Dashboard: Charts(static for now), Edit products page: CRUD operations.
+5. Login page: Admins only can login for now.
 
 Minor features: scroll to top, navbar, sidebar, snackbar, products list dynamically refresh after isertion/deletion/update
 
